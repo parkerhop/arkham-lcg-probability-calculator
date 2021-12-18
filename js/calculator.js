@@ -1,5 +1,3 @@
-var counter = 0;
-
 var chaosBagTokens = [
     {id: 'plusOne', quantity: 1, value: 1},
     {id: 'zero', quantity: 2, value: 0},
@@ -14,8 +12,3 @@ var chaosBagTokens = [
     {id: 'elderThing', quantity: 1, value: 'lookup'},
     {id: 'star', quantity: 1, value: 'lookup'}
 ]
-
-function increment() {
-    console.log('Counter is at: ' + counter);
-    counter = counter + 1;
-}
