@@ -1,0 +1,12 @@
+body {
+    background: var(--bs-gray-800);
+    color: var(--bs-gray-500);
+}
+
+input {
+    margin-left: 10px;
+}
+
+.row {
+    padding-bottom: 10px;
+}
