@@ -1,4 +1,4 @@
-var chaosBagTokens = [
+let chaosBagTokens = [
     {id: 'plusOne', quantity: 1, value: 1},
     {id: 'zero', quantity: 2, value: 0},
     {id: 'minusOne', quantity: 3, value: -1},
@@ -12,3 +12,22 @@ var chaosBagTokens = [
     {id: 'elderThing', quantity: 1, value: 'lookup'},
     {id: 'star', quantity: 1, value: 'lookup'}
 ]
+
+function init() {
+    togglePlayers($("#playerCount").val());
+}
+
+function togglePlayers(playerCount) {
+    // Parse to int, otherwise playerCount is treated as a string, and addition becomes concatenation
+    let playerCountNum = parseInt(playerCount);
+
+    // Show active players
+    for (let index = 1; index <= playerCountNum; index++) {
+        $("div[data-index='" + index + "']").show();
+    }
+
+    // Hide inactive players
+    for (let index = playerCountNum + 1; index <= 4; index++) {
+        $("div[data-index='" + index + "']").hide();
+    }
+}

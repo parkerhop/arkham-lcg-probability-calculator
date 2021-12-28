@@ -14,7 +14,7 @@
 
         <title>Arkham Horror LCG Probability Calculator</title>
     </head>
-    <body>
+    <body onload="init()">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -31,7 +31,7 @@
                     <label>Number of Players Performing Check:</label>
                 </div>
                 <div class="col-10">
-                    <input type="number" id="playerCount" value="1">
+                    <input type="number" id="playerCount" value="2" min="1" max="4" onchange="togglePlayers(this.value)">
                 </div>
             </div>
             <div class="row">
@@ -67,6 +67,170 @@
                         </div>
                         <div class="col-10">
                             <input type="number" id="elderThingValue" value="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" data-index="1">
+                <div class="col-2">
+                    <h3>Player 1</h3>
+                </div>
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col-3">
+                            <label>Character Name (optional): </label>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" name="characterName" data-index="1" value="Daisy">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-2">
+                            <label>Skill Check Attempts:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="number" name="skillCheckAttempts" data-index="1" min="0" value="1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <label>Base Skill Value:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="number" name="baseSkillValue" data-index="1" min="0" value="2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <label>Star Modifier:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="number" name="starModifier" data-index="1" value="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" data-index="2">
+                <div class="col-2">
+                    <h3>Player 2</h3>
+                </div>
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col-3">
+                            <label>Character Name (optional): </label>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" name="characterName" data-index="2" value="Zoey">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-2">
+                            <label>Skill Check Attempts:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="number" name="skillCheckAttempts" data-index="2" min="0" value="0">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <label>Base Skill Value:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="number" name="baseSkillValue" data-index="2" min="0" value="2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <label>Star Modifier:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="number" name="starModifier" data-index="2" value="1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" data-index="3">
+                <div class="col-2">
+                    <h3>Player 3</h3>
+                </div>
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col-3">
+                            <label>Character Name (optional): </label>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" name="characterName" data-index="3" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-2">
+                            <label>Skill Check Attempts:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="number" name="skillCheckAttempts" data-index="3" min="0" value="0">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <label>Base Skill Value:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="number" name="baseSkillValue" data-index="3" min="0" value="2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <label>Star Modifier:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="number" name="starModifier" data-index="3" value="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" data-index="4">
+                <div class="col-2">
+                    <h3>Player 4</h3>
+                </div>
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col-3">
+                            <label>Character Name (optional): </label>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" name="characterName" data-index="4" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-2">
+                            <label>Skill Check Attempts:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="number" name="skillCheckAttempts" data-index="4" min="0" value="0">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <label>Base Skill Value:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="number" name="baseSkillValue" data-index="4" min="0" value="2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <label>Star Modifier:</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="number" name="starModifier" data-index="4" value="0">
                         </div>
                     </div>
                 </div>
