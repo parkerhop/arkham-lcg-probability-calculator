@@ -18,3 +18,12 @@ input[type=text] {
 .row {
     padding-bottom: .7em;
 }
+
+img.token {
+    width: 3.4em;
+    height: auto;
+}
+
+input.token-input {
+    margin-top: .8em;
+}
