@@ -27,3 +27,7 @@ img.token {
 input.token-input {
     margin-top: .8em;
 }
+
+span#results {
+    font-weight: bold;
+}
