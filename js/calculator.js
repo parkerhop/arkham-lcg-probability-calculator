@@ -9,7 +9,7 @@ let chaosBagTokens = [
     {id: 'minusFour', quantity: 1, value: -4},
     {id: 'cultist', quantity: 1, value: 'lookup'},
     {id: 'autoFail', quantity: 1, value: -99},
-    {id: 'tablet', quantity: 1, value: 'lookup'},
+    {id: 'tablet', quantity: 2, value: 'lookup'},
     {id: 'skull', quantity: 2, value: 'lookup'},
     {id: 'elderThing', quantity: 1, value: 'lookup'},
     // Use different value for star modifier since its lookup value is unique to each character
