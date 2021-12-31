@@ -5,7 +5,7 @@ let chaosBagTokens = [
     {id: 'zero', quantity: 2, value: 0},
     {id: 'minusOne', quantity: 3, value: -1},
     {id: 'minusTwo', quantity: 2, value: -2},
-    {id: 'minusThree', quantity: 1, value: -3},
+    {id: 'minusThree', quantity: 2, value: -3},
     {id: 'minusFour', quantity: 1, value: -4},
     {id: 'cultist', quantity: 1, value: 'lookup'},
     {id: 'autoFail', quantity: 1, value: -99},
